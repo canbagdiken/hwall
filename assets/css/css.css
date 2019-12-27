@@ -1,0 +1,43 @@
+.wall {
+    width: 90%;
+    margin: auto;
+    display: block;
+}
+
+
+.wall > div { 
+    display: block;
+    padding: 25px;
+    background-color: #efefef;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+
+
+.wall > div:last-child {
+    border-bottom: 0px solid;
+}
+
+
+
+.send {
+    width: 90%;
+    display: block;
+    margin: auto;
+    height: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #ccc;
+    min-height: 150px;
+    border-radius: 15px;
+}
+
+
+.send textarea {
+    width: 90%;
+    display: block;
+    margin: auto;
+    height: 50px;
+}
+
