@@ -14,19 +14,3 @@ Only copy files and update the API URI in assets/js/script.js
 Copy all files to your server and create a mySql db. Update index.php with your mysql database access information and change your manage password. Its ready.
 
  
-## How is it work?
-
-System has two major part, client user interface script and API script. API developed with PHP(v5) and work with mySql, UI script developed by jquery (v2.2), html5 and css3.
-
-```mermaid
-sequenceDiagram
-Client Script->>API : send(user message)
-API->>API: check msg
-API->>mySql: inserts to table of msg
-mySql->>API: success
-API->>Client Script: result(success)
-Client Script->>API : list()
-API->>mySql: request messages
-mySql->API: messages
-API->>Client Script: messages
-```
