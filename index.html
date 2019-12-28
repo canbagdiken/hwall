@@ -6,15 +6,35 @@
 	<meta name="viewport" content="width=device-width">
 	<meta name="keywords" content="hwall interactive wall" />
 	<meta name="description" content="hwall" />
+	
+	<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  
 	<script async type="text/javascript" src="assets/js/script.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'><link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Roboto+Condensed:300,400,700&amp;subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/css.css" media="screen" />
 
 </head>
 <body>
+	
+
+		<div id="header">
+			<div id="logo">HWALL - Homework purposeful message wall project</div>
+
+			<button id="login">MANAGE</button>
+			
+		</div>
+			<p>That project developed for SE308 lecturer Raif Kaplan in Izmir University of Economics Izmir/Turkey<p>	
+
+	<div class="msg">
+			HATA
+		</div>
 		<div class="send">
-			<textarea id="msg"></textarea>
-			<button>Send</button>
+			<div id="loader" class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+			<textarea id="msg" placeholder="Start to typing..."></textarea>
+			<button id="sendBtn">Send</button>
 		</div>
 
 		<div class="wall">
@@ -35,5 +55,6 @@
 				<p>Message Sample</p>
 			</div>
 		</div>
+		
 </body>
 </html>
