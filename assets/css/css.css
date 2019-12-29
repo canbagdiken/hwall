@@ -27,6 +27,7 @@ body > p {
     box-sizing: border-box;
     margin-bottom: 5px;
     border-radius: 15px;
+	position:relative;
 }
 
 
@@ -138,6 +139,86 @@ div#logo {
     color: #fff;
 	cursor:pointer;
 }
+
+
+
+
+
+
+
+
+div#manage {
+    position: absolute;
+    right: 5%;
+    top: 50px;
+    background: #6f6b6b;
+    padding: 25px;
+    box-sizing: border-box;
+    z-index: 999;
+    border-radius: 0px 0px 15px 15px;
+}
+
+
+
+
+
+
+#manage input#pw {
+    width: 80%;
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 22pt;
+    text-align: center;
+    float: left;
+    background-color: transparent;
+    border: 1px solid #ddd;
+	color:#ddd
+}
+
+
+#manage #loginBtn {
+    width: 20%;
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    color: #999;
+    border: 0px;
+    float: left;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    font-size: 12pt;
+    font-weight: bolder;
+	cursor:pointer;
+}
+
+
+
+.wall > div > button {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    background-color: #ff6767;
+    color: #fff;
+    border: 0px;
+    font-size: 9pt;
+    line-height: 30px;
+    text-align: center;
+    padding: 0px;
+}
+
+
+.wall > div > em {
+    position: absolute;
+    right: 25px;
+    bottom: 15px;
+    font-size: 12pt;
+}
+
 
 
 /*

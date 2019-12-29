@@ -26,7 +26,7 @@ function afterSend(){
 	
 }
 function loadList(){
-		$.post("http://bagdiken.com/demo/hwall/list/",{},function(){},"json")
+		$.post("http://bagdiken.com/demo/hwall/list/",{token:$("body").attr("data-token")},function(){},"json")
 		.fail(function( data ) {
 		 err(data.msg);	 
 		
@@ -38,7 +38,14 @@ function loadList(){
 				console.log(row);
 				var dt = $("<span>").html(row.date);
 				var msg = $("<p>").html(row.msg);
-				$("<div>").appendTo($(".wall")).append(dt).append(msg);	
+				
+				var msgRow = $("<div>").appendTo($(".wall")).append(dt).append(msg);	
+				if(row.id !== undefined){
+				msgRow.append($("<button>").attr("data-id",row.id).html("X"));	
+				msgRow.append($("<em>").html(row.ip));	
+				
+				}
+				
 			});
 			
 			
@@ -47,6 +54,23 @@ function loadList(){
 	  });
 	
 }
+
+
+
+function login(){
+		$.post("http://bagdiken.com/demo/hwall/login/",{pw:$("#loginpw").val()},function(){},"json")
+		.fail(function( data ) {
+		 err(data.msg);	 
+		
+	  }).success(function( data ) {
+					 
+	  }).always(function(){
+	  });
+	
+}
+
+
+
 
 $("document").ready(function(){
 	loadList();
@@ -81,6 +105,52 @@ $("document").ready(function(){
 	  });
 	console.log("ok");
 });
+
+
+
+
+	$("#login").click(function(){
+		$("#manage").toggle();
+	});
+
+
+	$("#loginBtn").click(function(){
+		
+		$("#manage").hide();
+	if($("#pw").val().trim().length < 1){
+		err("Your password was empty :(");
+		return;
+	}	
+
+	
+	
+	preSend();
+			$.post("http://bagdiken.com/demo/hwall/login/",{pw:$("#pw").val()},function(){},"json")
+		.fail(function( data ) {
+		 err("tech err");
+		 
+		
+	  }).success(function( data ) {
+		  console.log(data.status);
+		   if(data.login){
+			  $("body").attr("data-token",data.token);
+			suc(data.msg);  
+			afterSend();
+		  }else{
+			  err(data.msg);
+		  }
+		 
+	  }).always(function(){
+		afterSend();
+		$("#pw").val("");
+	  });
+	console.log("ok");
+});
+
+
+
+
+
 	
 });
 
