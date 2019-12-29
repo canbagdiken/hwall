@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule send	index.php?a=send	[L]
+RewriteRule list	index.php?a=list	[L]
+RewriteRule login	index.php?a=login	[L]
+RewriteRule delete	index.php?a=delete	[L]
