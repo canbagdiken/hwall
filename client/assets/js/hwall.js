@@ -5,7 +5,7 @@
 */
 
 // API address variable
-var API = "http://bagdiken.com/demo/hwall/";
+var API = "http://bagdiken.com/demo/hwall/API/";
 
 // hide msg sending functions and show loading effect
 function preSend() {  
