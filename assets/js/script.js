@@ -109,6 +109,10 @@ $("document").ready(function(){
 
 
 
+	$(".wall button").click(function(){
+		// click
+	});
+
 	$("#login").click(function(){
 		$("#manage").toggle();
 	});
