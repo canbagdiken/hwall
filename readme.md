@@ -1,5 +1,5 @@
 # Welcome to hwall
-That project developed for SE308 lecturer **Raif Kaplan** in Izmir University of Economics Izmir/Turkey by **Can Baðdiken**, **Yiðit Demircan** and **Berkay Ömerbaþ**. 
+That project developed for SE308 lecturer **Raif Kaplan** in Izmir University of Economics Izmir/Turkey by **Can BaÄŸdiken**, **YiÄŸit Demircan** and **Berkay Ã–merbaÅŸ**. 
 
 
 
